@@ -13,4 +13,10 @@ let createDomain = (arr1, arr2, arr3) => {
 let pronoun = ["the", "our"];
 let adj = ["great", "big"];
 let noun = ["jogger", "racoon"];
-console.log(createDomain(pronoun, adj, noun));
+
+const domainGen = document.querySelector("#domain");
+
+window.onload = function() {
+  console.log(createDomain(pronoun, adj, noun).join("\n"));
+  domainGen.innerHTML = createDomain(pronoun, adj, noun).join("<br/>");
+};
